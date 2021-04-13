@@ -47,7 +47,7 @@ describe('Dependency Container', () => {
   it('should return me the dependency when it exists in the container', () => {
     container.bind(UserRepository.name).to(UserRepository)
     const resolvedDep = container.get(UserRepository.name)
-
+    
     expect(resolvedDep).toBeDefined()
     expect(resolvedDep).toBeInstanceOf(UserRepository)
   })
